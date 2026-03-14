@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+{% extends 'myapp/base.html' %}
+
+{%block contentblock%}
+
+    <div class="container">
+        <p class="h1 text-center text-primary">Register Student Here</p>
+
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <p class="h2">Add Student</p>
+                    </div>
+
+                    <div class="card-body">
+                        <form method="post" enctype="multipart/form-data">
+
+                            {%csrf_token%}
+
+                            {{form.as_p}}
+
+                            <button class="btn btn-sm btn-primary">Register</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+        
+
+{%endblock%}

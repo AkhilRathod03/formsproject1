@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+{% extends 'myapp/base.html' %}
+
+{%block contentblock%}
+
+        <div class="container mt-5">
+            <!-- <p class="h1 text-center text-primary">Edit Page</p> -->
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-header bg-primary">
+                            <p class="h1 text-white text-center">Edit {{student.StuName}}</p>
+                        </div>
+                        <div class="card-body">
+                            <form  method="post" enctype="multipart/form-data">
+                                {%csrf_token%}
+
+                                {{form.as_p}}
+
+                                <button class="btn btn-md btn-primary">Edit</button>
+
+                                <a href="/" class="btn btn-md float-end btn-warning">Back</a>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+
+
+
+             
+        </div>
+
+
+
+{%endblock%}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+{% extends 'myapp/base.html' %}
+
+{%block contentblock%}
+
+        <div class="container mt-5">
+            <!-- <p class="h1 text-center text-primary">Search Page</p> -->
+
+           <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header text-center text-white bg-primary">
+                        <p class="h1">{{stu.StuName}} Info</p>
+                    </div>
+                    <div class="card-body text-left">
+                        <p class="h2">Student ID: {{stu.StuId}}</p>
+                        <p class="h2">Student Name: {{stu.StuName}}</p>
+                        <p class="h2">Student Marks: {{stu.Stumarks}}</p>
+
+
+                        <a href="/" class="btn btn-primary btn-sm">Back</a>
+
+                        <a href="/edit/{{stu.id}}" class="btn float-end btn-sm btn-danger">Edit</a>
+                         
+                    </div>
+                </div>
+            </div>
+           </div>
+
+
+
+             
+        </div>
+
+
+
+{%endblock%}
