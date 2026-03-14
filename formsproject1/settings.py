@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'formsproject1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'stu_pro_db',
-        'USER': 'root',
-        'PASSWORD': 'tiger',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
