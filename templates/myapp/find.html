@@ -8,21 +8,35 @@
             <!-- <p class="h1 text-center text-primary">Search Page</p> -->
 
            <div class="row d-flex justify-content-center">
-            <div class="col-md-5">
-                <div class="card">
+            <div class="col-md-7">
+                <div class="card shadow">
                     <div class="card-header text-center text-white bg-primary">
-                        <p class="h1">{{stu.StuName}} Info</p>
+                        <p class="h1">{{stu.StuName}} Information</p>
                     </div>
-                    <div class="card-body text-left">
-                        <p class="h2">Student ID: {{stu.StuId}}</p>
-                        <p class="h2">Student Name: {{stu.StuName}}</p>
-                        <p class="h2">Student Marks: {{stu.Stumarks}}</p>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6  ">
+                                <p class="h2">Student ID: {{stu.StuId}}</p>
+                                <p class="h2">Student Name: {{stu.StuName}}</p>
+                                <p class="h2">Student Marks: {{stu.Stumarks}}</p>
 
+                               <div class="mt-4">
+                                    <a href="/" class="btn btn-primary btn-md">Back</a>
+                                    <a href="/edit/{{stu.id}}" class="btn float-end btn-md btn-danger">Edit</a>
+                               </div>                         
+                            </div>
 
-                        <a href="/" class="btn btn-primary btn-sm">Back</a>
+                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                {%if stu.StuImg%}
+                                    <img src={{stu.StuImg.url}} alt="{{stu.StuName}}" class="img-fluid rounded border" style="max-height: 200px; object-fit: cover;" >
+                                {%else%}
+                                    <div class="p-4 bg-light border rounded">
+                                        <p class="h5 text-muted">No Image Available</p>
+                                    </div>
+                                {%endif%}
+                            </div>
 
-                        <a href="/edit/{{stu.id}}" class="btn float-end btn-sm btn-danger">Edit</a>
-                         
+                        </div>
                     </div>
                 </div>
             </div>

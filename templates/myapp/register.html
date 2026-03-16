@@ -2,16 +2,18 @@
 
 {% extends 'myapp/base.html' %}
 
+{% load widget_tweaks %}
+
 {%block contentblock%}
 
     <div class="container">
-        <p class="h1 text-center text-primary">Register Student Here</p>
+        <p class="h1 pb-2 mb-3 text-center text-white bg-primary">Register Student Here</p>
 
         <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-header bg-primary text-white">
-                        <p class="h2">Add Student</p>
+                        <p class="h2 text-center">Add Student</p>
                     </div>
 
                     <div class="card-body">
@@ -19,9 +21,29 @@
 
                             {%csrf_token%}
 
-                            {{form.as_p}}
+                            <!-- {{form.as_p}} -->
 
-                            <button class="btn btn-sm btn-primary">Register</button>
+                            <div class="form-group mb-3">
+                                {{form.StuId | add_class:"form-control" | attr:"placeholder=Enter_ID"}}
+                            </div>
+
+                             <div class="form-group mb-3">
+                                {{form.StuName | add_class:"form-control" | attr:"placeholder=Enter_Name"}}
+                            </div>
+
+                             <div class="form-group mb-3">
+                                {{form.Stumarks | add_class:"form-control" | attr:"placeholder=Enter_Marks"}}
+                            </div>
+
+                            <div class="form-group mb-3">
+                                {{form.StuImg | add_class:"form-control" | attr:"placeholder=Enter_Image"}}
+                            </div>
+
+
+
+                            <button class="btn fw-bold btn-sm btn-primary">Register</button>
+
+                            <a href="/" class="btn  ps-3 pe-3 text-white fw-bold btn-sm btn-warning float-end">List</a>
 
                         </form>
                     </div>

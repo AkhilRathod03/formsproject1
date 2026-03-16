@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -118,5 +119,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+#for images upload
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

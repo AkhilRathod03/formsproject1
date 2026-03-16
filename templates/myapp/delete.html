@@ -7,35 +7,47 @@
         <div class="container mt-5">
             <!-- <p class="h1 text-center text-primary">Search Page</p> -->
 
-           <div class="row d-flex justify-content-center">
-            <div class="col-md-5">
-                <div class="card">
-                    <div class="card-header text-center text-white bg-danger">
-                        <p class="h2">Do You Want To Delete ? </p>
-                    </div>
-                    <div class="card-body text-left">
-                        <p class="h2">Student ID: {{student.StuId}}</p>
-                        <p class="h2">Student Name: {{student.StuName}}</p>
-                        <p class="h2">Student Marks: {{student.Stumarks}}</p>
-                    </div>
-                    <div class="card-footer">
-                        <form method="post">
+           <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-7">
+                    <div class="card">
+                        <div class="card-header text-center text-white bg-danger">
+                            <p class="h2">Do You Want To Delete ? </p>
+                        </div>
+                        <div class="card-body ">
+                                <div class="row">
+                                    <!-- left side -->
+                                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                                        
+                                        <p class="h2">Student ID: {{student.StuId}}</p>
+                                        <p class="h2">Student Name: {{student.StuName}}</p>
+                                        <p class="h2">Student Marks: {{student.Stumarks}}</p>
+                        
+                                        <form method="post">
 
-                            {%csrf_token%}
+                                                {%csrf_token%}
 
-                            <a href="/" class="btn btn-primary btn-md">Back</a>
-                            <button class="btn btn-md btn-danger float-end">Delete</button>
-                         
-                        </form>
+                                                <a href="/" class="btn btn-primary btn-md mt-4">Back</a>
+                                                <button class="btn btn-md btn-danger float-end mt-4">Delete</button>
+                            
+                                        </form>
+                                    </div>
+
+                                    <!-- Right Side -->
+                                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                                        {%if student.StuImg%}
+                                            <img src="{{student.StuImg.url}}" alt="{{student.StuName}}" class="img-fluid rounded border" style="max-height: 200px;  object-fit: cover;" >
+                                        {%else%}
+                                            <div class="  border rounded" style="width: 170px; height: 150px;">
+                                                <p class="h6 p-5 text-muted ">No Image Available</p>
+                                            </div>
+                                        {%endif%}
+                                    </div>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
-           </div>
-
-
-
-             
-        </div>
+         </div>
 
 
 

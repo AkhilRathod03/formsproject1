@@ -5,7 +5,7 @@
 {%block contentblock%}
 
     <div class="container">
-        <p class="h1 text-center text-primary"> Student Info </p>
+        <p class="h1 rounded text-center pb-2 text-white bg-primary"> Student Info </p>
 
 
         <section>
@@ -45,9 +45,9 @@
                                 <td class="h6">{{stu.Stumarks}}</td>
                                 <td class="">
                                     {%if stu.StuImg%}
-                                        <img src={{stu.StuImg.url}} alt={{stu.StuName}} class=" shadow-sm rounded" style="width: 60px; height: 70px; object-fit: cover; border: none;">
+                                        <img src={{stu.StuImg.url}} alt={{stu.StuName}} class=" shadow border-black rounded" style="width: 60px; height: 80px; object-fit: cover; border: none;">
                                     {%else%}
-                                        <span class="text-muted small">No Image</span>
+                                        <span class="text-muted ">No Image</span>
                                     {%endif%}
                                 </td>
                                 <td>
