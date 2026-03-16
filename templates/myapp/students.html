@@ -30,6 +30,7 @@
                                 <th class="bg-primary text-white">StuId</th>
                                 <th class="bg-primary text-white">StuName</th>
                                 <th class="bg-primary text-white">StuMarks</th>
+                                <th class="bg-primary text-white">StuEmail</th>
                                 <th class="bg-primary text-white">Upload Image</th>
                                 <th class="bg-primary text-white">Actions</th>
                             </tr>
@@ -43,6 +44,7 @@
                                 <td class="h6">{{stu.StuId}}</td>
                                 <td class="h6">{{stu.StuName|capfirst}}</td>
                                 <td class="h6">{{stu.Stumarks}}</td>
+                                <td class="h6">{{stu.StuEmail}}</td>
                                 <td class="">
                                     {%if stu.StuImg%}
                                         <img src={{stu.StuImg.url}} alt={{stu.StuName}} class=" shadow border-black rounded" style="width: 60px; height: 80px; object-fit: cover; border: none;">

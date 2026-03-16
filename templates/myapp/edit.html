@@ -19,21 +19,37 @@
                             <div class="row">
                                 <!-- div for left side -->
                                  <div class="col-md-6">
-                                    <form  method="post" enctype="multipart/form-data">
+                                    <form  method="post" enctype="multipart/form-data" novalidate>
                                         {%csrf_token%}
 
                                         <!-- {{form.as_p}} -->
 
                                         <div class="mb-3">
                                             {{form.StuId | add_class:"form-control" | attr:"placeholder=Enter_ID"}}
+                                            {% if form.StuId.errors%}
+                                                <div class="text-danger">{{ form.StuId.errors}}</div>
+                                            {%endif%}
                                         </div>
 
                                          <div class="mb-3">
                                             {{form.StuName | add_class:"form-control" | attr:"placeholder=Enter_Name"}}
+                                             {% if form.StuName.errors%}
+                                                <div class="text-danger">{{ form.StuName.errors}}</div>
+                                            {%endif%}
                                         </div>
 
                                          <div class="mb-3">
                                             {{form.Stumarks | add_class:"form-control" | attr:"placeholder=Enter_Marks"}}
+                                             {% if form.Stumarks.errors%}
+                                                <div class="text-danger">{{ form.Stumarks.errors}}</div>
+                                            {%endif%}
+                                        </div>
+
+                                        <div class="form-group mb-3">
+                                            {{form.StuEmail | add_class:"form-control" | attr:"placeholder=Enter_Email"}}
+                                            {% if form.StuEmail.errors %}
+                                                <div class="text-danger">{{form.StuEmail.errors}}</div>
+                                            {%endif%}
                                         </div>
 
                                          <div class="form-group mb-3">

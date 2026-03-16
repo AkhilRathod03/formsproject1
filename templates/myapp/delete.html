@@ -18,10 +18,11 @@
                                     <!-- left side -->
                                     <div class="col-md-6 d-flex flex-column justify-content-center">
                                         
-                                        <p class="h2">Student ID: {{student.StuId}}</p>
-                                        <p class="h2">Student Name: {{student.StuName}}</p>
-                                        <p class="h2">Student Marks: {{student.Stumarks}}</p>
-                        
+                                        <p class="h4">Student ID: {{student.StuId}}</p>
+                                        <p class="h4">Student Name: {{student.StuName}}</p>
+                                        <p class="h4">Student Marks: {{student.Stumarks}}</p>
+                                        <p class="h4">Student Email: {{student.StuEmail}}</p>
+                                        
                                         <form method="post">
 
                                                 {%csrf_token%}
